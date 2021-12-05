@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Archivo">
+    <title> MGBD Automotive </title>
+    <link rel="icon" type="image/svg" href="../assets/vectors/favicon.svg">
+</head>
+<body>
+<div style="width:100%; height:60px; position:fixed; background-color:white; float:left; margin-top:-8px; margin-left:-8px; z-index:20;">
+  <a href="page0.html" class="link"><img src="../assets/vectors/homeRect.svg" height="50" style="margin-left:-10px;"/></a>
+  <ul>
+      <li><a href="page1.html" class="link">Parts</a></li>
+      <li><a href="" class="link">Services</a></li>
+      <li><a href="" class="link">Cars</a></li>
+      <li><a href="" class="link">Guides</a></li>
+      <li><a href="" class="link">News</a></li>
+      <li><a href="" class="link">About Us</a></li>
+  </ul>
+  <a href="page3.html" class="link"><img src="../assets/vectors/cartRect.svg" height="50" style="float:right; margin-top:-60px;"/>
+  <p id="cartValue">$0</p></a>
+</div>
+
+<div id="slidesMain">
+  <img src="../assets/rasters/slidesMain0.png" style="width:100%" id="singleSlide">
+</div>
+
+<a onclick="changeSlide(2)"><img id="btnL" src="../assets/vectors/btn.svg"></a>
+<a onclick="changeSlide(1)"><img id="btnR" src="../assets/vectors/btn.svg"></a>
+
+<div style="text-align:center;">
+  <img class="indicator" id="ind0" src="../assets/vectors/indicatorFull.svg">
+  <img class="indicator" id="ind1" src="../assets/vectors/indicator.svg">
+  <img class="indicator" id="ind2" src="../assets/vectors/indicator.svg">
+</div>
+
+<h1>Featured</h1>
+
+<div class="itemContain">
+  <img src="../assets/vectors/item0.svg" style="width:100%;" id="item0" onmouseover="itemHover(this)" onmouseleave="itemHover2(this)">
+  <div class="itemText">Electronic Ignition</div>
+</div>
+<div class="itemContain">
+  <img src="../assets/vectors/item1.svg" style="width:100%;" id="item1" onmouseover="itemHover(this)" onmouseleave="itemHover2(this)">
+  <div class="itemText">Batteries</div>
+</div>
+<div class="itemContain">
+  <img src="../assets/vectors/item2.svg" style="width:100%;" id="item2" onmouseover="itemHover(this)" onmouseleave="itemHover2(this)">
+  <div class="itemText">Motor Oil</div>
+</div>
+<div class="itemContain">
+  <img src="../assets/vectors/item3.svg" style="width:100%;" id="item3" onmouseover="itemHover(this)" onmouseleave="itemHover2(this)">
+  <div class="itemText">Power Steering</div>
+</div>
+
+<h1>Services</h1>
+
+<div class="itemContain">
+  <img src="../assets/vectors/item4.svg" style="width:100%;" id="item4" onmouseover="itemHover(this)" onmouseleave="itemHover2(this)">
+  <div class="itemText2">Complete Tune-Up</div>
+</div>
+<div class="itemContain">
+  <img src="../assets/vectors/item5.svg" style="width:100%;" id="item5" onmouseover="itemHover(this)" onmouseleave="itemHover2(this)">
+  <div class="itemText2">Detailing</div>
+</div>
+<div class="itemContain">
+  <img src="../assets/vectors/item6.svg" style="width:100%;" id="item6" onmouseover="itemHover(this)" onmouseleave="itemHover2(this)">
+  <div class="itemText2">Car Wash</div>
+</div>
+<div class="itemContain">
+  <img src="../assets/vectors/item7.svg" style="width:100%;" id="item7" onmouseover="itemHover(this)" onmouseleave="itemHover2(this)">
+  <div class="itemText2">Interior Cleaning</div>
+</div>
+
+<h1>Community<i style="font-size:26px; font-weight:100; margin-left:15px;">recent posts</i></h1>
+
+<div class="itemContain">
+  <img src="../assets/vectors/item8.svg" style="width:100%;" id="item8" onmouseover="itemHover(this)" onmouseleave="itemHover2(this)">
+  <div class="itemText">@Roger+ - 1972 RP6</div>
+</div>
+<div class="itemContain">
+  <img src="../assets/vectors/item9.svg" style="width:100%;" id="item9" onmouseover="itemHover(this)" onmouseleave="itemHover2(this)">
+  <div class="itemText">@Sam_ca - 1971 P6 3500</div>
+</div>
+<div class="itemContain">
+  <img src="../assets/vectors/item10.svg" style="width:100%;" id="item10" onmouseover="itemHover(this)" onmouseleave="itemHover2(this)">
+  <div class="itemText">@Charlie63 - Jaguar E 61</div>
+</div>
+
+<div style="width:101%; height:60px; background-color:#4e7b53; float:left; margin-top:25px; margin-left:-8px;">
+  <div style="display:inline-flex;">
+    <a href=""><p class="bottomLink">About Us</p></a>
+    <a href=""><p class="bottomLink">Jobs</p></a>
+    <a href=""><p class="bottomLink">Terms</p></a>
+    <a href=""><p class="bottomLink">Privacy Policy</p></a>
+    <a href=""><p class="bottomLink">Site Tree</p></a>
+  </div>
+  <p id="copyright">© 2021 MGBD PARTS & SERVICES</p>
+</div>
+
+
+
+<script type="text/javascript">
+
+var slideIndex = 0;
+
+function changeSlide(n)
+{
+  slideIndex = slideIndex + n;
+  slideIndex = slideIndex % 3;
+  switch(slideIndex)
+  {
+    case 0: document.getElementById("ind0").src = "../assets/vectors/indicatorFull.svg";
+            document.getElementById("ind1").src = "../assets/vectors/indicator.svg";
+            document.getElementById("ind2").src = "../assets/vectors/indicator.svg";
+            document.getElementById("singleSlide").src = "../assets/rasters/slidesMain0.png"; break;
+
+    case 1: document.getElementById("ind0").src = "../assets/vectors/indicator.svg";
+            document.getElementById("ind1").src = "../assets/vectors/indicatorFull.svg";
+            document.getElementById("ind2").src = "../assets/vectors/indicator.svg";
+            document.getElementById("singleSlide").src = "../assets/rasters/slidesMain1.png"; break;
+
+    case 2: document.getElementById("ind0").src = "../assets/vectors/indicator.svg";
+            document.getElementById("ind1").src = "../assets/vectors/indicator.svg";
+            document.getElementById("ind2").src = "../assets/vectors/indicatorFull.svg";
+            document.getElementById("singleSlide").src = "../assets/rasters/slidesMain2.png"; break;
+  }
+}
+
+function itemHover(item)
+{
+  document.getElementById(item.id).src = "../assets/vectors/"+String(item.id)+"b.svg";
+}
+
+function itemHover2(item)
+{
+  document.getElementById(item.id).src = "../assets/vectors/"+String(item.id)+".svg";
+}
+
+</script>
+</body>
+</html>

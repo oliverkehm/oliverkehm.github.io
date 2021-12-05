@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Archivo">
+    <title> MGBD - Shell Rotella</title>
+    <link rel="icon" type="image/svg" href="../assets/vectors/favicon.svg">
+</head>
+<body>
+<div style="width:100%; height:60px; position:fixed; background-color:white; float:left; margin-top:-34px; margin-left:-8px; z-index:20;">
+  <a href="page0.html" class="link"><img src="../assets/vectors/homeRect.svg" height="50" style="margin-left:-10px;"/></a>
+  <ul>
+      <li><a href="page1.html" class="link">Parts</a></li>
+      <li><a href="" class="link">Services</a></li>
+      <li><a href="" class="link">Cars</a></li>
+      <li><a href="" class="link">Guides</a></li>
+      <li><a href="" class="link">News</a></li>
+      <li><a href="" class="link">About Us</a></li>
+  </ul>
+  <a href="page3.html" class="link"><img src="../assets/vectors/cartRect.svg" height="50" style="float:right; margin-top:-60px;"/>
+  <p id="cartValue">$0</p></a>
+</div>
+
+
+<h1 style="padding-top:110px; margin-left:4%; padding-left:120px;">Shell Rotella 5W-40</h1>
+<a href="page1b.html" class="backLink">← Back to <i><b>Oil & Fluids</b></i></a>
+<ul id="partInfo">
+  <li class="subText" style="margin-right:160px;">$25.99</li>
+  <li class="subText">5.0 &#9733</li>
+</ul>
+<p class="paraText">
+Shell Rotella T6 5W-40 Diesel Engine Oil is a full synthetic motor oil that features exclusive Triple Protection Plus technology, formulated with fully synthetic base oils plus advanced additives to protect against wear, deposits and oil
+</p>
+<img src="../assets/rasters/item0.png" style="float:right; margin-top:-250px; margin-right:10%; width:400px;">
+<img src="../assets/vectors/btn2.svg" id="btn2" style="width:150px; margin-left:4%; padding-left:100px; cursor:pointer;" onmouseover="itemHover(this)" onmouseleave="itemHover2(this)" onclick="addToCart(25.99); setTimeout(timer,2000);">
+<p id="addToast"></p>
+
+<h1 style="padding-top:150px; margin-left:4%; padding-left:120px;">Specifications</h1>
+
+<table>
+  <tr>
+    <th>Flammable</th>
+    <td>YES</td>
+  </tr>
+  <tr>
+    <th class="tableRows">Flash Point (°C)</th>
+    <td class="tableRows">201.00</td>
+  </tr>
+  <tr>
+    <th>Min Oper. Temp (°C)</th>
+    <td>-26</td>
+  </tr>
+  <tr>
+    <th class="tableRows">Motor Oil Type</th>
+    <td class="tableRows">Synthetic</td>
+  </tr>
+  <tr>
+    <th>Product Height</th>
+    <td>32cm</td>
+  </tr>
+  <tr>
+    <th class="tableRows">Product Width</th>
+    <td class="tableRows">12cm</td>
+  </tr>
+  <tr>
+    <th>Volume</th>
+    <td>5L</td>
+  </tr>
+  <tr>
+    <th class="tableRows">Mass</th>
+    <td class="tableRows">4.41kg</td>
+  </tr>
+</table>
+
+<img src="../assets/rasters/item0b.png" style="float:right; margin-top:-250px; margin-right:10%; width:400px;">
+
+<div style="width:101%; height:60px; background-color:#4e7b53; float:left; margin-top:300px; margin-left:-8px;">
+  <div style="display:inline-flex;">
+    <a href=""><p class="bottomLink">About Us</p></a>
+    <a href=""><p class="bottomLink">Jobs</p></a>
+    <a href=""><p class="bottomLink">Terms</p></a>
+    <a href=""><p class="bottomLink">Privacy Policy</p></a>
+    <a href=""><p class="bottomLink">Site Tree</p></a>
+  </div>
+  <p id="copyright">© 2021 MGBD PARTS & SERVICES</p>
+</div>
+
+
+
+<script type="text/javascript">
+
+function itemHover(item)
+{
+  document.getElementById(item.id).src = "../assets/vectors/"+String(item.id)+"b.svg";
+}
+
+function itemHover2(item)
+{
+  document.getElementById(item.id).src = "../assets/vectors/"+String(item.id)+".svg";
+}
+
+function addToCart(item)
+{
+  if(String(sessionStorage.getItem("cartTotal")) == "NaN"){sessionStorage.setItem("cartTotal",0);}
+  cartTotal = parseFloat(sessionStorage.getItem("cartTotal"));
+  cartTotal = cartTotal + parseFloat(item);
+  sessionStorage.setItem("cartTotal",cartTotal);
+  document.getElementById("cartValue").innerHTML = "$" + String(sessionStorage.getItem("cartTotal"));
+  document.getElementById("addToast").innerHTML = "Added!";
+}
+
+function timer()
+{
+  document.getElementById("addToast").innerHTML = "";
+}
+
+</script>
+</body>
+</html>

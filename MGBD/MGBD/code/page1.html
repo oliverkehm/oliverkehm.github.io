@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Archivo">
+    <title> MGBD - Parts </title>
+    <link rel="icon" type="image/svg" href="../assets/vectors/favicon.svg">
+</head>
+<body>
+<div style="width:100%; height:60px; position:fixed; background-color:white; float:left; margin-top:-34px; margin-left:-8px; z-index:20;">
+  <a href="page0.html" class="link"><img src="../assets/vectors/homeRect.svg" height="50" style="margin-left:-10px;"/></a>
+  <ul>
+      <li><a href="page1.html" class="link">Parts</a></li>
+      <li><a href="" class="link">Services</a></li>
+      <li><a href="" class="link">Cars</a></li>
+      <li><a href="" class="link">Guides</a></li>
+      <li><a href="" class="link">News</a></li>
+      <li><a href="" class="link">About Us</a></li>
+  </ul>
+  <a href="page3.html" class="link"><img src="../assets/vectors/cartRect.svg" height="50" style="float:right; margin-top:-60px;"/>
+  <p id="cartValue">$0</p></a>
+</div>
+
+<h1 style="padding-top:80px;">Parts</h1>
+
+<div class="itemContain">
+  <a href="page1b.html"><img src="../assets/rasters/cat0.png" style="width:100%;" id="cat0" onmouseover="itemHover(this)" onmouseleave="itemHover2(this)"></a>
+</div>
+<div class="itemContain">
+  <img src="../assets/rasters/cat1.png" style="width:100%;" id="cat1" onmouseover="itemHover(this)" onmouseleave="itemHover2(this)">
+</div>
+<div class="itemContain">
+  <img src="../assets/rasters/cat2.png" style="width:100%;" id="cat2" onmouseover="itemHover(this)" onmouseleave="itemHover2(this)">
+</div>
+<div class="itemContain">
+  <img src="../assets/rasters/cat3.png" style="width:100%;" id="cat3" onmouseover="itemHover(this)" onmouseleave="itemHover2(this)">
+</div>
+<div class="itemContain">
+  <img src="../assets/rasters/cat4.png" style="width:100%;" id="cat4" onmouseover="itemHover(this)" onmouseleave="itemHover2(this)">
+</div>
+<div class="itemContain">
+  <img src="../assets/rasters/cat5.png" style="width:100%;" id="cat5" onmouseover="itemHover(this)" onmouseleave="itemHover2(this)">
+</div>
+
+<div style="width:101%; height:60px; background-color:#4e7b53; float:left; margin-top:300px; margin-left:-8px;">
+  <div style="display:inline-flex;">
+    <a href=""><p class="bottomLink">About Us</p></a>
+    <a href=""><p class="bottomLink">Jobs</p></a>
+    <a href=""><p class="bottomLink">Terms</p></a>
+    <a href=""><p class="bottomLink">Privacy Policy</p></a>
+    <a href=""><p class="bottomLink">Site Tree</p></a>
+  </div>
+  <p id="copyright">© 2021 MGBD PARTS & SERVICES</p>
+</div>
+
+
+
+<script type="text/javascript">
+
+function itemHover(item)
+{
+  document.getElementById(item.id).src = "../assets/rasters/"+String(item.id)+"b.png";
+}
+
+function itemHover2(item)
+{
+  document.getElementById(item.id).src = "../assets/rasters/"+String(item.id)+".png";
+}
+
+</script>
+</body>
+</html>
